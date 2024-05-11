@@ -1,0 +1,407 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+nav{
+    width: 100%;
+    height: 13%;
+    background-color: white;
+    padding: 0px 20px;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    position: fixed;
+}
+.logo{
+    height: 100%;
+    width: 10%;
+    overflow: hidden;
+}
+.logo img{
+    height: 100%;
+}
+.selector{
+    display: flex;
+    gap: 20px;
+}
+.input{
+    padding-right: 50px;
+}
+input{
+    width: 180px;
+    height: 35px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 4px;
+    border: 3px solid rgba(131, 48, 208, 0.736);
+
+}
+button{
+    border-radius:4px ;
+    border: none;
+    font-weight: bold;
+    color: white;
+    height: 35px;
+    width: 90px;
+    background-color: #2a73a7;
+}
+.search:hover{
+    background-color: black
+}
+main{
+    display: flex;
+    width: 100%;
+    height: calc(100% - 34px);
+    padding-right: 30px;
+
+}
+.card-container{
+    
+    margin-top: 95px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-left: 140px;
+    width: 100%;
+    display: flex;
+    row-gap: 20px;
+    overflow-y: auto;
+}
+.card{
+    margin: 20px;
+    background-color: aquamarine;
+    height: 350px;
+    width: 400px;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 0 4px #d4ecff;
+    overflow: hidden;
+}
+.card:hover{
+    background-color: #f9fdff;
+    box-shadow: 8px 8px 8px #d4ecff;
+    transform: translateY(-2px);
+}
+.card-header img{
+    width:100% ;
+    height: 180px;
+    object-fit: cover;
+}
+.card-content{
+    padding-left: 15px;
+    padding-top: 5px;
+}
+.card-content p{
+    font-size: 15px;
+}
+.card-content h6{
+    margin-top: 10px;
+    margin-block-end: 10px;
+}
+
+.selector h4:hover{
+    color: blue;
+}
+
+.bookmark{
+    overflow-x: hidden;
+    margin-top: 92px;
+    height: 100%;
+    width: 5%;
+    overflow-y: auto;
+    background-color:cornsilk;
+    position: fixed;
+    padding-right: 10px;
+    transition: width 0.5s;
+
+}
+.profile{
+    width: 230px;
+    display: flex;
+    height: 10%;
+    
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgba(176, 209, 45, 0.2);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: start;
+
+}
+.profile img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.profile h4{
+    display: none;
+}
+.profile h5{
+    display: none;
+}
+.card2{
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 15%;
+    width: 215px;
+    overflow: hidden; 
+    display: flex;
+    position: relative;
+    border-radius: 2px;
+
+}
+.card2 i{
+    position: absolute;
+    right: 3px;
+    bottom: 1px;
+    color: black;
+    margin-top: 2px;
+}
+.card2 h6{
+    display: none;
+    font-size: 10px;
+    margin-left: 5px;
+}
+.card2 img{
+    display: none;
+    width: 30%;
+    object-fit: cover;
+    
+}
+.ri-bookmark-3-fill{
+    position: absolute;
+    top: 14%;
+    left: 1%;
+    border: 2px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.ri-bookmark-3-fill:hover{
+    background-color: black;
+    color: #f9fdff;
+}
+
+.bookmark:hover{
+    width: 15%;
+}
+.bookmark:hover .name{
+    display: block;
+
+}
+.bookmark:hover .id{
+    display: block;
+}
+.bookmark:hover .card2{
+    background-color: #d4ecff;;
+}
+.bookmark:hover .card2 img{
+    display: block;
+}
+.bookmark:hover .card2 h6{
+    display: block;
+}
+.bookmark:hover .card2 p{
+    display: block;
+}
+#bkcbtn{
+    cursor: pointer;
+    transition: transform 0.1s;
+    background-color: blue;
+}
+
+@media (max-width:700px) {
+    nav{
+        width: 100%;
+        height: 10%;
+        background-color: white;
+        padding: 1px 5px;
+        border-bottom: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        position: fixed;
+    }
+    .logo{
+        height: 100%;
+        width: 18%;
+    }
+    .logo img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .selector{
+        display: flex;
+        gap: 8px;
+        font-size: 8px;
+    }
+    .input{
+        padding-right: 5px;
+    }
+    input{
+        font-size: 10px;
+        width: 80px;
+        height: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        border-radius: 4px;
+        border: 2px solid rgba(131, 48, 208, 0.736);
+    
+    }
+    button{
+        border-radius:2px;
+        border: none;
+        font-weight: bold;
+        color: white;
+        height: 20px;
+        width: 45px;
+        background-color: #2a73a7;
+        font-size: 10px;
+    }
+    .search:hover{
+        background-color: black
+    }
+    main{
+        display: flex;
+        width: 100%;
+        height: calc(100% - 34px);
+        padding-right: 30px;
+    
+    }
+    .card-container{
+        margin-top: 60px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-right: 10px;
+        padding-left: 30px;
+        width: 100%;
+        display: flex;
+        row-gap: 3px;
+        overflow-y: auto;
+    }
+    .card{
+        margin: 10px;
+        background-color: aquamarine;
+        height: 150px;
+        width: 120px;
+        cursor: pointer;
+        border-radius: 2px;
+        background-color: #fff;
+        box-shadow: 0 0 4px #d4ecff;
+        overflow: hidden;
+    }
+    .card:hover{
+        background-color: #f9fdff;
+        box-shadow: 8px 8px 8px #d4ecff;
+        transform: translateY(-2px);
+    }
+    .card-header img{
+        width:100% ;
+        height: 50px;
+        object-fit: cover;
+    }
+    .card-content{
+        padding-left: 10px;
+        padding-top: 1px;
+    }
+    .card-content p{
+        margin-top: 0px;
+        font-size: 7px;
+    }
+    .card-content h6{
+        font-size: 5px;
+        margin-top: 1px;
+        margin-block-end: 10px;
+    }
+    .card-content h3{
+        font-size:8px ;
+    }
+    #bkcbtn{
+        height: 15px;
+        width: 30px;
+    }
+    
+    .selector h4:hover{
+        color: blue;
+    }
+
+    .bookmark{
+        overflow-x: hidden;
+        margin-top: 88px;
+        height: 100%;
+        width: 8%;
+        overflow-y: auto;
+        background-color:cornsilk;
+        position: fixed;
+        padding-right: 10px;
+        transition: width 0.5s;
+    
+    }
+    .bookmark:hover{
+        width: 25%;
+    }
+    .profile img{
+        width: 20px;
+        height: 20px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    .profile h4{
+        display: none;
+        font-size: 10px;
+    }
+    .profile h5{
+        width: 60px;
+        height: 20px;
+        font-size: 6px;
+        font-weight: 500;
+        display: none;
+    }
+    .card2{
+        margin-left: 5px;
+        margin-top: 5px;
+        height: 9%;
+        width: 87px;
+        overflow: hidden; 
+        display: flex;
+        position: relative;
+        border-radius: 1px;
+    
+    }
+    .card2 i{
+        position: absolute;
+        right: 1px;
+        bottom: 1px;
+        font-size: 6px;
+        color: black;
+        margin-top: 2px;
+    }
+    .card2 h6{
+        display: none;
+        font-size: 6px;
+        font-weight: 400;
+        margin-left: 5px;
+    }
+    .card2 img{
+        display: none;
+        width: 20%;
+        object-fit: cover;
+        
+    }
+
+    
+}
+
+
