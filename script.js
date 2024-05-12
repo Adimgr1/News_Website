@@ -1,4 +1,4 @@
-const API_key='dfb3d6dfd457425dba0e1b16afaea143'
+const API_key='640e06cac0c3428782b705ed85e6584e'
 const url= 'https://newsapi.org/v2/everything?q='
 let input= document.querySelector('#input1')
 let url1;
